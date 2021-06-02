@@ -11,8 +11,9 @@ const BulianSum = WithoutFractions % 2 == 0;
 const Rest = 500 - Sum;
 const ArithmeticMean = Math.round(((Bread + Cheese + Meat) / 3) * 100) / 100;
 const RandomDiscount = Math.random();
+const RandomDiscountFix = Math.round(RandomDiscount * 10000) / 100;
 const AmountPay = Math.round((Sum - Sum * RandomDiscount) * 100) / 100;
-const Profit = (Sum / 2) - (Sum * RandomDiscount);
+const Profit = Math.round(((Sum / 2) - (Sum * RandomDiscount)) * 100) / 100;
 console.log("Максимальне число: " + MaxNumber);
 console.log("Мінімальне число: " + MinNumber);
 console.log("Сума: " + Sum);
@@ -21,7 +22,7 @@ console.log("Сума заокруглена до сотень: " + SumRoundedTo
 console.log("Число парне: " + BulianSum);
 console.log("Решта з 500: " + Rest);
 console.log("Середнє арифметичне: " + ArithmeticMean);
-console.log("Рандомна знижка: " + RandomDiscount);
+console.log("Рандомна знижка: " + RandomDiscountFix);
 console.log("Сума виплати: " + AmountPay);
 console.log("Прибуток: " + Profit);
 
@@ -35,6 +36,6 @@ document.writeln(`
   Число парне: ${BulianSum} <br/>
   Решта з 500: ${Rest} <br/>
   Середнє арифметичне: ${ArithmeticMean} <br/>
-  Рандомна знижка: ${RandomDiscount} <br/>
+  Рандомна знижка: ${RandomDiscountFix} <br/>
   Сума виплати: ${AmountPay} <br/>
   Прибуток: ${Profit}`)
