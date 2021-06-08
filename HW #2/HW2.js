@@ -1,28 +1,25 @@
-const firstNumber = prompt("Введіть число N:");
-const lastNumber = prompt("Введіть число M:");
-let firstNumberFix = parseInt(firstNumber);
-const lastNumberFix = parseInt(lastNumber);
-const firstNumberEven =  Number.isInteger(firstNumberFix);
-const lastNumberEven = Number.isInteger(lastNumberFix);
+let firstNumber = Number(prompt("ВВедіть число N: "));
+while (Number.isNaN(firstNumber) || !(Number.isInteger(firstNumber)) || !firstNumber) {
+    firstNumber = Number(prompt ("Будьласка спробуйте знову, ви ввели невірне число: "));
+}
+let lastNumber = Number(prompt("ВВедіть число M: "));
+while (Number.isNaN(lastNumber) || !(Number.isInteger(lastNumber)) || !lastNumber) {
+    lastNumber = Number(prompt("Будьласка спробуйте знову, ви ввели невірне число: "));
+}
 const skipEvenNumbers = confirm("Пропускати парні числа?");
 let sumFromNToM = 0;
+let minNumber = Math.min(firstNumber, lastNumber);
+const maxNumber = Math.max(firstNumber, lastNumber);
 console.log("Число N: " + firstNumber);
 console.log("Число M: " + lastNumber);
-console.log("Число N парне: " + firstNumberEven);
-console.log("Число M парне: " + lastNumberEven);
 console.log("Пропускати парні числа: " + skipEvenNumbers);
-  for (sumFromNToM; firstNumberFix <= lastNumberFix; firstNumberFix++)
-  {
-    if(skipEvenNumbers)
-    {
-      if(firstNumberFix % 2 == 0) continue
+  for (sumFromNToM; minNumber <= maxNumber; minNumber++){
+    if(skipEvenNumbers){
+      if(minNumber % 2 == 0) continue
       {
-        sumFromNToM = sumFromNToM + firstNumberFix;
+        sumFromNToM = sumFromNToM + minNumber; }
       }
-    }
-else
-  {
-sumFromNToM = sumFromNToM + firstNumberFix;
-  }
- }
+else{
+sumFromNToM = sumFromNToM + minNumber; }
+}
   console.log("Сума чисел на проміжку між N та M: " + sumFromNToM);
