@@ -13,13 +13,10 @@ const maxNumber = Math.max(firstNumber, lastNumber);
 console.log("Число N: " + firstNumber);
 console.log("Число M: " + lastNumber);
 console.log("Пропускати парні числа: " + skipEvenNumbers);
-  for (sumFromNToM; minNumber <= maxNumber; minNumber++){
-    if(skipEvenNumbers){
-      if(minNumber % 2 == 0) continue
-      {
-        sumFromNToM = sumFromNToM + minNumber; }
-      }
-else{
-sumFromNToM = sumFromNToM + minNumber; }
+for(let i = minNumber; i <= maxNumber; i++){
+if (skipEvenNumbers && i % 2 ===0){
+continue;
+}
+sumFromNToM = sumFromNToM + i;
 }
   console.log("Сума чисел на проміжку між N та M: " + sumFromNToM);
