@@ -7,9 +7,9 @@ function getMaxDigit(number){
 console.log(`1. Найбільше число: ${getMaxDigit(8230482840248284)}`);
 
 function mathPow(number, degree){
-  let c = 1;
+  let growingDegree = 1;
   let sum = 1;
-  for(number, degree; c <= degree; c++) {
+  for(number, degree; growingDegree <= degree; growingDegree++) {
     sum = sum * number;
   }
   return sum;
@@ -29,35 +29,35 @@ function tax(salary){
 console.log(`4. ЗП без податку: ${tax(1000)}`);
 
 function getRandomNumber(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+  const minNumber = Math.ceil(min);
+  const maxNumber = Math.floor(max);
+  return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
 }
 console.log(`5. Рандомне число: ${getRandomNumber(10, 1000)}`);
 
 function countLetter(letter, word){
-  let i = 0;
-  let k = 0;
-  for(letter, word, i, k; i < word.length; i++){
-    if(word.toLowerCase()[i] === letter) k++;
+  let letterIndex = 0;
+  let sumOfLetters = 0;
+  for(letter, word, letterIndex, sumOfLetters; letterIndex < word.length; letterIndex++){
+    if(word.toLowerCase()[letterIndex] === letter) sumOfLetters++;
   }
-return k;
+return sumOfLetters;
 }
-console.log(`6. Буква: ${countLetter("п", "Паралелепіпед")}`);
+console.log(`6. Буква зустрічається у тексті (разів): ${countLetter("п", "Паралелепіпед")}`);
 
 function convertCurrency(sum){
-let k;
+let convertedSum;
   while (!(sum.includes("$")) && !(sum.includes("UAH"))){
-  k = "Помилка, вкажіть коректне значення: UAH або $";
-  return k;
+  convertedSum = "Помилка, вкажіть коректне значення: UAH або $";
+  return convertedSum;
 }
   if (sum.includes("$")){
-k = (sum.match(/\d+/)) * 27;
+convertedSum = (sum.match(/\d+/)) * 27;
   }
   else if (sum.includes("UAH")){
-k = (sum.match(/\d+/)) / 27;
+convertedSum = (sum.match(/\d+/)) / 27;
 }
-return k;
+return convertedSum;
 }
 console.log(`7. Конвертація: ${convertCurrency("1000UAH")}`);
 
