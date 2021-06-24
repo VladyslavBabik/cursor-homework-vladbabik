@@ -44,9 +44,9 @@ console.log(`Середня оцінка: `, getAverageMark(students[0]));
 //3
 function getStudentInfo(student){
 	const students = {
-		course: student.course,
-		name: student.name,
-		mark: getAverageMark(student),
+	course: student.course,
+	name: student.name,
+	mark: getAverageMark(student),
 	};
 	return students;
 }
