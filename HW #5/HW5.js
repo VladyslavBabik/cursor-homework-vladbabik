@@ -1,7 +1,6 @@
 //1
 const getRandomArray = (length,min,max) => {
-const number = () =>  Math.floor( Math.random() * (max - min) + min);
-return Array.from({length: length}, number);
+return Array.from({length: length},() =>  Math.floor( Math.random() * (max - min) + min));
     }
 console.log(`Масив рандомних чисел: `, getRandomArray(15,1,100));
 //3
