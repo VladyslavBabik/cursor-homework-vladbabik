@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  background-image: url('./image/starwars.jpg');
+  background-attachment: fixed;
+  position: relative;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.navbar {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.btn, select, #next, #previous{
+  background-color: #033a57;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 10px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#output {
+  color: #ffffff;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  margin: 20px;
+  border-radius: 20px;
+  text-align: center;
+  align-content: center;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  line-height: 50px;
+  background-color: #033a57
+}
+
+.item .avatar {
+  max-width: 400px;
+  height: 400px;
+}
